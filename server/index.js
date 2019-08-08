@@ -13,15 +13,19 @@ app.get('/', (req, res) => {
 <html>
 <body>
   <div id="app">
-    <h1>Hello ?name=${escapeHTML(name)}</h1>
+    <h1>Hello ?name={{name}}</h1>
   </div>
   <footer>
   <a href="https://github.com/azu/vue-client-side-template-injection-example">Source Code</a>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
   <script>
+    window.__INITIAL_STATE__ = ${JSON.stringify({ name })};
+  </script>
+  <script>
       new Vue({
-        el: '#app'
+        el: '#app',
+        data: window.__INITIAL_STATE__ || {}
       });
   </script>
 </body>
