@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "name": "vue-client-side-template-injection-example",
+  "builds": [
+    { "src": "server/**/*.js", "use": "@now/node" }
+  ],
+  "routes": [{ "src": "/", "dest": "server/index.js" }]
+}
