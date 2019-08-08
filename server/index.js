@@ -15,6 +15,9 @@ app.get('/', (req, res) => {
   <div id="app">
     <h1>Hello ?name=${escapeHTML(name)}</h1>
   </div>
+  <footer>
+  <a href="https://github.com/azu/vue-client-side-template-injection-example">Source Code</a>
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
   <script>
       new Vue({
