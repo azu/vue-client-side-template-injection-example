@@ -19,13 +19,12 @@ app.get('/', (req, res) => {
   <a href="https://github.com/azu/vue-client-side-template-injection-example">Source Code</a>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
-  <script>
-    window.__INITIAL_STATE__ = ${JSON.stringify({ name })};
+  <script data-initial-state="${escapeHTML(JSON.stringify({ name }))}">
   </script>
   <script>
       new Vue({
         el: '#app',
-        data: window.__INITIAL_STATE__ || {}
+        data: JSON.parse(document.querySelector("[data-initial-state]").dataset.initialState)
       });
   </script>
 </body>
